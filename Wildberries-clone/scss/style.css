@@ -656,12 +656,6 @@ footer .footer__copyright__image ul {
   .product-cards__card__image {
     height: 195px;
   }
-  .product-cards__card__image button {
-    right: 0;
-    bottom: -3.1rem;
-    padding: 0.35rem;
-    border-radius: 16%;
-  }
   .product-cards__card__price {
     font-size: 1rem;
     padding: 0.3rem 0 0;
@@ -715,6 +709,10 @@ footer .footer__copyright__image ul {
     font-size: 0.6rem !important;
     padding: 0.7rem 0 !important;
     color: #aaa;
+  }
+  .basket {
+    width: 40%;
+    right: -40%;
   }
   .basket__nav p {
     font-size: 1rem;
@@ -782,6 +780,13 @@ footer .footer__copyright__image ul {
   }
   .product-cards__card__image__view p {
     display: none;
+  }
+  .product-cards__card__image button {
+    bottom: -3rem;
+    padding: 0.35rem;
+  }
+  .product-cards__card__image button:hover {
+    background-color: #fff;
   }
   .product-cards__card__image:hover .product-cards__card__image__view {
     opacity: 1;
@@ -861,11 +866,28 @@ footer .footer__copyright__image ul {
     width: 100%;
     right: -100%;
   }
+  .basket__nav {
+    padding: 1rem 1rem 0 2rem;
+  }
+  .basket__nav p {
+    font-size: 1.4rem;
+  }
   .basket__nav button {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .basket__products__elem {
     margin: 0.7rem 1rem 0;
+  }
+  .basket__products__elem button {
+    font-size: 1.4rem;
+  }
+  .basket__products__elem__img {
+    width: 3rem;
+  }
+  .basket__delete button {
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    margin: 0 0 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

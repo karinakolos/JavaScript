@@ -476,12 +476,6 @@ footer {
       padding: 0.5rem;
       &__image {
         height: 195px;
-        button {
-          right: 0;
-          bottom: -3.1rem;
-          padding: 0.35rem;
-          border-radius: 16%;
-        }
       }
       &__price {
         font-size: 1rem;
@@ -548,6 +542,8 @@ footer {
     }
   }
   .basket {
+    width: 40%;
+    right: -40%;
     &__nav {
       p {
         font-size: 1rem;
@@ -620,6 +616,13 @@ footer {
             display: none;
           }
         }
+        button {
+          bottom: -3rem;
+          padding: 0.35rem;
+        }
+      }
+      &__image button:hover {
+        background-color: #fff;
       }
       &__image:hover .product-cards__card__image__view {
         opacity: 1;
@@ -708,13 +711,30 @@ footer {
     width: 100%;
     right: -100%;
     &__nav {
+      padding: 1rem 1rem 0 2rem;
+      p {
+        font-size: 1.4rem;
+      }
       button {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
     }
     &__products {
       &__elem {
         margin: 0.7rem 1rem 0;
+        button {
+          font-size: 1.4rem;
+        }
+        &__img {
+          width: 3rem;
+        }
+      }
+    }
+    &__delete {
+      button {
+        font-size: 1.1rem;
+        padding: 0.75rem;
+        margin: 0 0 1rem;
       }
     }
   }
