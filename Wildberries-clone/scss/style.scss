@@ -625,6 +625,8 @@ footer {
       }
       &__image button:hover {
         background-color: #fff;
+        background: url(../image/button-basket-active.png) no-repeat center;
+        background-size: 60%;
       }
       &__image:hover .product-cards__card__image__view {
         opacity: 1;
