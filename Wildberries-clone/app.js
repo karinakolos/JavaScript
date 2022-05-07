@@ -44,7 +44,6 @@ var splide = new Splide(".splide", {
   pagination: true,
 });
 splide.mount();
-
 function render(array) {
   cards.innerHTML = " ";
   array.forEach((el) => {
