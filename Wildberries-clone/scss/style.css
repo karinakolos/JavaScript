@@ -782,6 +782,8 @@ footer .footer__copyright__image ul {
     display: none;
   }
   .product-cards__card__image button {
+    width: 2rem;
+    height: 2rem;
     bottom: -3rem;
     padding: 0.35rem;
   }
@@ -838,8 +840,8 @@ footer .footer__copyright__image ul {
   }
   .popup {
     top: 15%;
-    left: 10%;
-    width: 80%;
+    left: 6%;
+    width: 88%;
     gap: 0.5rem;
   }
   .popup__title {

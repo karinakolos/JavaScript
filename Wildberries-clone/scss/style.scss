@@ -617,6 +617,8 @@ footer {
           }
         }
         button {
+          width: 2rem;
+          height: 2rem;
           bottom: -3rem;
           padding: 0.35rem;
         }
@@ -679,8 +681,8 @@ footer {
   }
   .popup {
     top: 15%;
-    left: 10%;
-    width: 80%;
+    left: 6%;
+    width: 88%;
     gap: 0.5rem;
     &__title {
       font-size: 1rem;
