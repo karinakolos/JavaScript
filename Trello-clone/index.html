@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trello-clone</title>
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./scss/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <div class="nav__search">
+            <input type="text" name="" id="search" class="white" />
+          </div>
+          <div class="nav__logo">Trello-Clone</div>
+          <div class="nav__secondary">
+            <button class="white">&#43;</button>
+            <div class="nav__time white"></div>
+            <div class="nav__image">
+              <img src="/image/logo.png" alt="Logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="wrapper">
+          <div class="todo-container">
+            <p class="todo-container__title">TODO</p>
+            <div class="todo-wrapper">
+              <div class="todo">
+                <div class="todo__title">Title</div>
+                <div class="todo__description">Description</div>
+                <div class="todo__user">User <span>Time</span></div>
+                <div class="todo__button">
+                  <button class="todo__button-edit">edit</button>
+                  <button class="todo__button-delete">delete</button>
+                  <button class="todo__button-next">&#8250;</button>
+                </div>
+              </div>
+              <div class="todo">
+                <div class="todo__title">Title</div>
+                <div class="todo__description">Description</div>
+                <div class="todo__user">User <span>Time</span></div>
+                <div class="todo__button">
+                  <button class="todo__button-edit">edit</button>
+                  <button class="todo__button-delete">delete</button>
+                  <button class="todo__button-next">&#8250;</button>
+                </div>
+              </div>
+              <div class="todo">
+                <div class="todo__title">Title</div>
+                <div class="todo__description">Description</div>
+                <div class="todo__user">User <span>Time</span></div>
+                <div class="todo__button">
+                  <button class="todo__button-edit">edit</button>
+                  <button class="todo__button-delete">delete</button>
+                  <button class="todo__button-next">&#8250;</button>
+                </div>
+              </div>
+            </div>
+            <button class="todo-container__button">&#43; Add todo</button>
+          </div>
+          <div class="in-progress-container">
+            <p class="in-progress-container__title">in progress</p>
+            <div class="in-progress"></div>
+          </div>
+          <div class="done-container">
+            <p class="done-container__title">done</p>
+            <div class="done"></div>
+            <button class="done-container__button">Delete All</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
