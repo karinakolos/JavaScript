@@ -35,6 +35,10 @@ img {
   height: auto;
 }
 
+button {
+  color: #000;
+}
+
 ::-webkit-scrollbar-track {
   padding: 2px 0;
   background-color: #fff;
@@ -132,7 +136,7 @@ header {
 }
 
 .nav__search input {
-  background: url("/image/search.svg");
+  background: url("../image/search.svg");
   background-size: 1rem;
   background-repeat: no-repeat;
   background-position: 90% center;
