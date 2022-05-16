@@ -9,14 +9,14 @@ body {
 }
 body {
   font-family: "Raleway", sans-serif;
-  background: linear-gradient(45deg, #fab699, #ffa5bd, #eea8fb) center no-repeat;
+  background: linear-gradient(45deg, #fab699, #ffa5bd, #eea8fb) fixed;
   z-index: 1;
 }
 .container {
   max-width: 1280px;
   margin: 0 auto;
 }
-.wrapper .todo-container {
+.wrapper {
   height: 90vh;
 }
 .white {
@@ -104,13 +104,14 @@ header {
 /* * MAIN STYLES * */
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 1rem 0.5rem;
-  gap: 2rem;
+  // gap: 1rem;
   .todo-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0 0 31%;
     padding: 1rem 0 0;
     background-color: #f6f6f6b1;
     border-radius: 0.15rem;
@@ -150,6 +151,7 @@ header {
         }
         &__user {
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           color: #242424;
         }
@@ -190,11 +192,12 @@ header {
   .in-progress-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0 0 31%;
     padding: 1rem 0;
     background-color: #f6f6f6b1;
     border-radius: 0.15rem;
     &__title {
+      flex-basis: 5%;
       text-align: center;
       text-transform: uppercase;
     }
@@ -228,6 +231,7 @@ header {
         }
         &__user {
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           color: #242424;
         }
@@ -255,7 +259,7 @@ header {
   .done-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0 0 31%;
     padding: 1rem 0 0;
     background-color: #f6f6f6b1;
     border-radius: 0.15rem;
@@ -295,6 +299,7 @@ header {
         }
         &__user {
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           color: #242424;
         }
@@ -365,13 +370,13 @@ header {
     background-color: rgba(255, 255, 255, 0.4);
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   &__wrapper {
     padding: 1.5rem 2rem;
   }
   &__item {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: center;
     &:after {
       content: "";
@@ -456,13 +461,13 @@ header {
     background-color: rgba(255, 255, 255, 0.4);
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   &__wrapper {
     padding: 1.5rem 2rem;
   }
   &__item {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: center;
     &:after {
       content: "";
@@ -611,6 +616,7 @@ header {
 /* *  STYLES * */
 .popup-opened {
   .popup {
+    overflow: hidden;
     z-index: 1000;
     opacity: 1;
     transition: all 0.3s ease-in-out;
@@ -621,7 +627,8 @@ header {
   }
 }
 .warning-delete-opened {
-  .popup {
+  .warning-delete {
+    overflow: hidden;
     z-index: 1000;
     opacity: 1;
     transition: all 0.3s ease-in-out;
@@ -632,7 +639,8 @@ header {
   }
 }
 .warning-in-progress-opened {
-  .popup {
+  .warning-in-progress {
+    overflow: hidden;
     z-index: 1000;
     opacity: 1;
     transition: all 0.3s ease-in-out;
@@ -644,6 +652,7 @@ header {
 }
 .popup__edit-opened {
   .popup__edit {
+    overflow: hidden;
     z-index: 1000;
     opacity: 1;
     transition: all 0.3s ease-in-out;
@@ -651,5 +660,162 @@ header {
   .overlay {
     opacity: 1;
     z-index: 999;
+  }
+}
+@media (max-width: 952px) {
+  html {
+    font-size: 15px;
+  }
+  .nav__logo {
+    flex: 0 0 50%;
+  }
+  .wrapper {
+    height: auto;
+  }
+  .wrapper {
+    justify-content: start;
+    .todo-container {
+      flex: 0 0 48.9%;
+      margin-right: 1rem;
+    }
+    .in-progress-container {
+      flex: 0 0 48.93%;
+    }
+    .done-container {
+      flex: 0 0 100%;
+      margin-top: 1rem;
+    }
+    .done__button {
+      button {
+        padding: 0.5rem 5rem !important;
+      }
+    }
+  }
+  .popup {
+    top: 25%;
+    left: 18%;
+    width: 64%;
+  }
+  .popup__edit {
+    top: 25%;
+    left: 18%;
+    width: 64%;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 0.5rem 0;
+    &__search {
+      input {
+        width: 5rem;
+      }
+    }
+    &__logo {
+      flex: 0 0 50%;
+    }
+    &__image {
+      display: none;
+    }
+  }
+  .wrapper {
+    height: auto;
+    margin: 0.5rem 1rem;
+  }
+  .wrapper {
+    .todo-container {
+      flex: 0 0 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    .in-progress-container {
+      flex: 0 0 100%;
+      margin-bottom: 1rem;
+    }
+    .done-container {
+      flex: 0 0 100%;
+      margin-top: 0;
+    }
+    .done__button {
+      button {
+        padding: 0.5rem 5rem !important;
+      }
+    }
+  }
+  .popup {
+    top: 25%;
+    left: 5%;
+    width: 90%;
+    &__wrapper {
+      padding: 2rem 1.5rem;
+    }
+    &__title {
+      p {
+        margin-left: 0;
+      }
+    }
+    &__deadline {
+      p {
+        margin-left: 0;
+      }
+    }
+    &__description {
+      p {
+        margin-left: 0;
+      }
+    }
+    &__button {
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      gap: 1rem;
+      select {
+        flex: 0 0 100%;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+  .popup__edit {
+    top: 25%;
+    left: 5%;
+    width: 90%;
+    &__wrapper {
+      padding: 2rem 1.5rem;
+    }
+    &__title {
+      p {
+        margin-left: 0;
+      }
+    }
+    &__deadline {
+      p {
+        margin-left: 0;
+      }
+    }
+    &__description {
+      p {
+        margin-left: 0;
+      }
+    }
+    &__button {
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      gap: 1rem;
+      select {
+        flex: 0 0 100%;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+  .warning-delete {
+    top: 40%;
+    left: 5%;
+    width: 90%;
+  }
+  .warning-in-progress {
+    top: 40%;
+    left: 5%;
+    width: 90%;
   }
 }

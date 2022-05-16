@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f3e2;
+}
+.grid {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  width: 415px;
+  height: 315px;
+}
+img {
+  cursor: pointer;
+}
