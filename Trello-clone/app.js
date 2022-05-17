@@ -32,6 +32,9 @@ let popupTitleEdit = document.getElementById("input-title-edit");
 let popupDescriptionEdit = document.getElementById("input-description-edit");
 let popupDeadlineEdit = document.getElementById("input-deadline-edit");
 let popupUserEdit = document.getElementById("select-edit");
+let todoContTitle = document.querySelector(".todo-container__title");
+let inprogContTitle = document.querySelector(".in-progress-container__title");
+let doneContTitle = document.querySelector(".done-container__title");
 
 let id = 0;
 let data = [];
@@ -244,14 +247,20 @@ function render(x = data) {
 }
 /* * HEADER * */
 navData.innerText = new Date().toLocaleTimeString().slice(0, -3);
-navData.addEventListener(
-  "mouseover",
-  () => (navData.innerText = new Date().toLocaleDateString())
-);
-navData.addEventListener(
-  "mouseout",
-  () => (navData.innerText = new Date().toLocaleTimeString().slice(0, -3))
-);
+navData.setAttribute("status", "time");
+navData.addEventListener("click", (e) => {
+  let target = e.target;
+  let stat = target.getAttribute("status");
+  console.log(stat);
+  if (stat == "time") {
+    navData.innerText = new Date().toLocaleDateString();
+    navData.setAttribute("status", "data");
+  }
+  if (stat == "data") {
+    navData.innerText = new Date().toLocaleTimeString().slice(0, -3);
+    navData.setAttribute("status", "time");
+  }
+});
 newTaskHeader.addEventListener("click", () =>
   body.classList.add("popup-opened")
 );
@@ -380,5 +389,27 @@ doneWrapper.addEventListener("click", (e) => {
     data.splice(data.indexOf(item), 1);
     setLocal("data", data);
     target.parentElement.parentElement.remove();
+  }
+});
+/* * MOBILE * */
+todoContTitle.addEventListener("click", () => {
+  if (todoWrapper.classList.contains("opened")) {
+    todoWrapper.classList.remove("opened");
+  } else {
+    todoWrapper.classList.add("opened");
+  }
+});
+inprogContTitle.addEventListener("click", () => {
+  if (progressWrapper.classList.contains("opened")) {
+    progressWrapper.classList.remove("opened");
+  } else {
+    progressWrapper.classList.add("opened");
+  }
+});
+doneContTitle.addEventListener("click", () => {
+  if (doneWrapper.classList.contains("opened")) {
+    doneWrapper.classList.remove("opened");
+  } else {
+    doneWrapper.classList.add("opened");
   }
 });

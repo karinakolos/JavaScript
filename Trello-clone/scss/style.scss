@@ -115,18 +115,18 @@ header {
     display: flex;
     flex-direction: column;
     flex: 0 0 31%;
-    padding: 1rem 0 0;
     background-color: #f6f6f6b1;
     border-radius: 0.15rem;
     &__title {
-      flex-basis: 5%;
+      flex-basis: 6%;
+      padding-top: 1rem;
       text-align: center;
       text-transform: uppercase;
     }
     .todo-wrapper {
       margin: 0.5rem 1rem;
       overflow: auto;
-      flex-basis: 85%;
+      flex-basis: 88%;
       .todo {
         background-color: #fff;
         padding: 1rem;
@@ -179,7 +179,7 @@ header {
       }
     }
     &__button {
-      flex-basis: 10%;
+      flex-basis: 6%;
       width: 100%;
       padding: 1rem 0;
       border: none;
@@ -196,11 +196,11 @@ header {
     display: flex;
     flex-direction: column;
     flex: 0 0 31%;
-    padding: 1rem 0;
     background-color: #f6f6f6b1;
     border-radius: 0.15rem;
     &__title {
-      flex-basis: 5%;
+      flex-basis: 6%;
+      padding-top: 1rem;
       text-align: center;
       text-transform: uppercase;
     }
@@ -263,16 +263,16 @@ header {
     display: flex;
     flex-direction: column;
     flex: 0 0 31%;
-    padding: 1rem 0 0;
     background-color: #f6f6f6b1;
     border-radius: 0.15rem;
     &__title {
-      flex-basis: 5%;
+      flex-basis: 6%;
+      padding-top: 1rem;
       text-align: center;
       text-transform: uppercase;
     }
     .done-wrapper {
-      flex-basis: 85%;
+      flex-basis: 88%;
       margin: 0.5rem 1rem;
       overflow: auto;
       .done {
@@ -327,7 +327,7 @@ header {
       }
     }
     &__button {
-      flex-basis: 10%;
+      flex-basis: 6%;
       width: 100%;
       padding: 1rem 0;
       border: none;
@@ -717,7 +717,7 @@ header {
       }
     }
     &__logo {
-      flex: 0 0 50%;
+      flex: 0 0 40%;
     }
     &__image {
       display: none;
@@ -745,6 +745,27 @@ header {
       button {
         padding: 0.5rem 5rem !important;
       }
+    }
+  }
+  .todo-wrapper {
+    max-height: 0px;
+    transition: all 0.65s linear;
+    &.opened {
+      max-height: 100%;
+    }
+  }
+  .in-progress-wrapper {
+    max-height: 0px;
+    transition: all 0.65s linear;
+    &.opened {
+      max-height: 100%;
+    }
+  }
+  .done-wrapper {
+    max-height: 0px;
+    transition: all 0.65s linear;
+    &.opened {
+      max-height: 100%;
     }
   }
   .popup {
